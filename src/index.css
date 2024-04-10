@@ -1,0 +1,116 @@
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.background {
+  background-image: url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.content {
+  position: absolute;
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  top: 0;
+   border-top-right-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px; 
+}
+.logo img {
+  width: 50px; 
+  height: auto;
+}
+.menu {
+  display: flex;
+}
+.hamburger {
+  display: flex;
+  align-items: center;
+  height:50px;
+  width:50px;
+}
+
+.connect-btn {
+  border-radius: 29px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.connect-button {
+  margin-left: auto; 
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  margin-left: 10px;
+}
+.social-icons > * {
+  margin-right: 5px; 
+}
+
+.login-btn {
+    border-radius: 29px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color:white;
+  padding: 5px 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+}
+.connect-button,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.content-container {
+  max-width: 400px; 
+  margin: 0 auto;
+}
+.user-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.btn-demo {
+  border-radius: 29px;
+  cursor: pointer;
+  background-color: #161616;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px; 
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 19px; 
+}
+
+.btn-demo:hover {
+  background-color: #414040;
+}
