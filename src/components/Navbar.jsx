@@ -26,10 +26,10 @@ function Navbar() {
         {showOptions && (
           <div className="options absolute bg-white border border-gray-200 mt-1 rounded-md shadow-lg w-40 top-full left-0">
             {/* Options content */}
-            <div className="p-2">Option 1</div>
-            <div className="p-2">Option 2</div>
-            <div className="p-2">Option 3</div>
-            <div className="p-2">Option 4</div>
+            <div className="p-2">Progress Report</div>
+            <div className="p-2">Daily Challenges</div>
+            <div className="p-2">Resource Library</div>
+            <div className="p-2">Chatbot</div>
           </div>
         )}
       </div>
