@@ -25,7 +25,6 @@ function Navbar() {
         <span className="ml-1">menu</span>
         {showOptions && (
           <div className="options absolute bg-white border border-gray-200 mt-1 rounded-md shadow-lg w-40 top-full left-0">
-            {/* Options content */}
             <div className="p-2">Progress Report</div>
             <div className="p-2">Daily Challenges</div>
             <div className="p-2">Resource Library</div>

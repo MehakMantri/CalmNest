@@ -114,3 +114,9 @@
 .btn-demo:hover {
   background-color: #414040;
 }
+.options div:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+
