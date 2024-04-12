@@ -47,58 +47,70 @@ export default function Chatarea() {
   };
 
   return (
-    <div className="chatarea flex flex-col justify-between items-center">
-      <div
-        className="flex justify-between items-center"
-        style={{
-          width: "100%",
-          borderBottom: "1px solid black",
-          padding: "0.75rem",
-        }}
-      >
-        <p className="logo mr-4 font-bold text-2xl">Your own doctor</p>
-        <input placeholder="Paste the api link.." className="rounded p-2" name="url" onChange={(e)=>{
-            e.preventDefault();
-            setUrl(e.target.value)}}/>
-        <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
-      </div>
-      <div className=" overflow-y-scroll border border-gray-300 rounded-lg mb-4 w-full h-full">
-        {message.map((message, index) => (
-          <div key={index} style={{ padding: '5px', backgroundColor: message.sender === 'user' ? '#f0f0f0' : '#e0f7fa' }} className="">
-            {message.text}
-            {/* {message.} */}
-          </div> 
-        ))}
-        
-      </div>
-      <form onSubmit={handleSubmit} style={{ position: "relative" }}>
-        <textarea
-          placeholder="Send your message"
-          name="query"
-          value={formData.query}
-          onChange={handleChange}
-          style={{
-            resize: "none",
-            border: "1px solid black",
-            width: "600px",
-            padding: "0.5rem",
-            borderRadius: "0.5rem",
-          }}
-        />
-        <button type="submit">
-          <FaArrowAltCircleUp
-            style={{
-              position: "absolute",
-              right: "10px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              cursor: "pointer",
-              fontSize: "1.25rem",
-              color: "green",
-            }}
-          />
-        </button>
-      </form>
+<div className="chatarea flex flex-col justify-between items-center">
+  <div
+    className="flex justify-between items-center"
+    style={{
+      width: "100%",
+      borderBottom: "1px solid #e0e0e0",
+      padding: "0.75rem",
+      // backgroundColor: ' #',
+      borderRadius:'20px'
+    }}
+  >
+    <p className="logo mr-4 font-bold text-2xl">calmNest Ai</p>
+    <input
+      placeholder="Paste the API link..."
+      className="rounded-xl p-2 shadow-md"
+      name="url"
+      style={{ width: "300px", marginLeft: "auto" }}
+      onChange={(e) => {
+        e.preventDefault();
+        setUrl(e.target.value);
+      }}
+    />
+    <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
+  </div>
+  <div className="chat-container">
+    <div className="message-container">
+      {message.map((message, index) => (
+        <div
+          key={index}
+          className={`message ${message.sender === "user" ? "user-message" : "bot-message"}`}
+        >
+          {message.text}
+        </div>
+      ))}
     </div>
+  </div>
+  <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%" }}>
+    <textarea
+      placeholder="Express how you feel today..."
+      name="query"
+      value={formData.query}
+      onChange={handleChange}
+      style={{
+        resize: "none",
+        border: "1px solid #bdbdbd",
+        width: "100%",
+        padding: "0.5rem",
+        borderRadius: "1.75rem",
+      }}
+    />
+    <button type="submit">
+      <FaArrowAltCircleUp
+        style={{
+          position: "absolute",
+          right: "10px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          cursor: "pointer",
+          fontSize: "1.25rem",
+          color: "green",
+        }}
+      />
+    </button>
+  </form>
+</div>
   );
 }
