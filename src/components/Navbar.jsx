@@ -19,6 +19,9 @@ function Navbar() {
   function chatHandler(){
     navigate("/chat")
   }
+  function resourceHandler(){
+    navigate("/resource")
+  }
 
   return (
     <div className="navbar flex justify-between items-center relative">
@@ -32,7 +35,7 @@ function Navbar() {
           <div className="options absolute bg-white border border-gray-200 mt-1 rounded-md shadow-lg w-40 top-full left-0">
             <div className="p-2" >Progress Report</div>
             <div className="p-2" >Daily Challenges</div>
-            <div className="p-2" >Resource Library</div>
+            <div className="p-2 cursor-pointer" onClick={resourceHandler}>Resource Library</div>
             <div className="p-2 cursor-pointer" onClick={chatHandler} >Chatbot</div>
           </div>
         )}
