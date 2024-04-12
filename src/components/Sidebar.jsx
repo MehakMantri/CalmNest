@@ -16,7 +16,7 @@ export default function Sidebar() {
               <IoSettingsOutline className='iconn' />
             </div>
             <div>
-             <FaRegUserCircle className='iconn'/>
+              <FaRegUserCircle className='iconn'/>
             </div>
         </div>
     )
