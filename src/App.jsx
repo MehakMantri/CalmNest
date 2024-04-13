@@ -7,6 +7,7 @@ import './index.css';
 import Home from './components/Home';
 import Chatbot from './components/Chatbot';
 import ResourceLibrary from './components/ResourceLibrary';
+import Report from './components/Report';
 import '@radix-ui/themes/styles.css';
 import '@radix-ui/themes/styles.css';
 import Books from './components/Books';
@@ -31,6 +32,7 @@ function App() {
           <Route index element={<Home navi={handleNavigateToHome}/>} />
           <Route path='/chat' element={<Chatbot navi={handleNavigateToHome}/>}/>
           <Route path='/resource' element={<ResourceLibrary navi={handleNavigateToHome}/>}/>
+          <Route path='/report' element={<Report/>}></Route>
             {/* <Route path='/resource/books' element={<Books/>}/>
             <Route path='/resource/articles' element={<Articles/>}/> */}
           {/* </Route> */}

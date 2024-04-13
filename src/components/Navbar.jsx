@@ -22,6 +22,9 @@ function Navbar() {
   function resourceHandler(){
     navigate("/resource")
   }
+  function reportHandler(){
+    navigate("/report")
+  }
 
   return (
     <div className="navbar flex justify-between items-center relative">
@@ -33,7 +36,7 @@ function Navbar() {
         <span className="ml-1 cursor-pointer">menu</span>
         {showOptions && (
           <div className="options absolute bg-white border border-gray-200 mt-1 rounded-md shadow-lg w-40 top-full left-0">
-            <div className="p-2" >Progress Report</div>
+            <div className="p-2" onClick={reportHandler}>Your Report</div>
             <div className="p-2" >Daily Challenges</div>
             <div className="p-2 cursor-pointer" onClick={resourceHandler}>Resource Library</div>
             <div className="p-2 cursor-pointer" onClick={chatHandler} >Chatbot</div>

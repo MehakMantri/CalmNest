@@ -161,7 +161,7 @@
 }
 .chatarea{
   width: 75%;
-  background-color: #ffffff;
+  overflow-y: auto;
 }
 
 input[type="text"] {
@@ -179,6 +179,7 @@ input[type="text"]:focus {
 .chat-container {
   width: 100%;
   padding: 10px;
+  overflow-y: auto;
 }
 
 .message-container {
