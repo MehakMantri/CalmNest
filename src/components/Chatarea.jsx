@@ -77,7 +77,7 @@ export default function Chatarea() {
     <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
   </div>
   <div className="chat-container" >
-    <div style={{display:'flex', justifyContent:'center', height:'100vh', alignItems:'center'}}>  {loading && <ThreeDots
+    <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
   visible={true}
   height="80"
   width="80"
