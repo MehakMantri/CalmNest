@@ -15,7 +15,7 @@ export default function Sidebar(props) {
         navigate("/")
     }
     const goForward = () => {
-        navigate(1); // Navigate forward
+        navigate(1); 
       };
       const goBack = () => {
         navigate(-1); // Navigate back
