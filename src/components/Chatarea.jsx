@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
+import { ThreeDots } from 'react-loader-spinner'
 import logo from "../assets/logo.png";
 
 export default function Chatarea() {
+ const [loading, setLoading] = useState(false);
  const [url,setUrl] = useState('');
  const [message,setMessage] = useState([]);
   const [formData, setformData] = useState({
@@ -19,6 +21,8 @@ export default function Chatarea() {
     let data;
     e.preventDefault();
     if(formData.query.trim() === '') return;
+
+    setLoading(true);
 
     /* ---------------------Save messages for user-----------------*/ 
     setMessage([...message, {text: formData.query, sender: 'user'}]);
@@ -37,6 +41,7 @@ export default function Chatarea() {
     }catch(err){
         console.log("Failed to get query data");
     }
+    setLoading(false);
     /* ---------------------Save messages for bot-----------------*/ 
     setTimeout(()=>{
         setMessage((previousMessage)=>[...previousMessage, {text: data.Answer, sender: 'bot'}]);
@@ -72,6 +77,17 @@ export default function Chatarea() {
     <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
   </div>
   <div className="chat-container" >
+    <div style={{display:'flex', justifyContent:'center', height:'100vh', alignItems:'center'}}>  {loading && <ThreeDots
+  visible={true}
+  height="80"
+  width="80"
+  color="#5BBCFF"
+  radius="9"
+  ariaLabel="three-dots-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />}</div>
+
     <div className="message-container">
       {message.map((message, index) => (
         <div
