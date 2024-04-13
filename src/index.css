@@ -133,6 +133,10 @@
   color: white;
   font-size: 1.50rem;
   cursor: pointer;
+  margin-bottom:10px;
+}
+.iconn:hover {
+    color: #93c4d4;
 }
 .chats{
   width: 20%;
