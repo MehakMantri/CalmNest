@@ -77,17 +77,6 @@ export default function Chatarea() {
     <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
   </div>
   <div className="chat-container" >
-    <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
-  visible={true}
-  height="80"
-  width="80"
-  color="#5BBCFF"
-  radius="9"
-  ariaLabel="three-dots-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  />}</div>
-
     <div className="message-container">
       {message.map((message, index) => (
         <div
@@ -100,6 +89,16 @@ export default function Chatarea() {
         </div>
       ))}
     </div>
+    <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
+  visible={true}
+  height="80"
+  width="80"
+  color="#5BBCFF"
+  radius="9"
+  ariaLabel="three-dots-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />}</div>
   </div>
   <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%" }}>
     <textarea
