@@ -77,7 +77,9 @@ export default function Chatarea() {
         <div
           key={index}
           className={`message ${message.sender === "user" ? "user-message" : "bot-message"}`}
-        >
+        style={{
+                alignSelf: message.sender === "user" ? "flex-end" : "flex-start",
+              }}>
           {message.text}
         </div>
       ))}
