@@ -139,7 +139,7 @@
   padding:20px;
   background-color:  #ebebeb;
   border-radius: 25px;
-  padding:20px;
+  padding: 35px;
 }
 .hoverColor {
   border: 1px solid transparent; 
@@ -149,14 +149,12 @@
   border:1px solid #fafafa;
   background-color: #1b1b1b;
   color:white;
-  padding: 20px;
   border-radius:10px;
 }
 .selected{
   background-color: #1b1b1b;
   color:white;
   border-radius: 10px;
-  padding:20px;
 }
 .chatsicon{
   font-size: 1.55rem;
@@ -185,9 +183,8 @@ input[type="text"]:focus {
 
 .message-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
-
 .message {
   width:50%;
   padding: 15px;
@@ -200,12 +197,9 @@ input[type="text"]:focus {
   background-color: #7FB3D5; 
   color: white;
   text-align: right; 
-  justify-content: flex-end;
-  
 }
 .bot-message {
   background-color: #778899;
-  color: black; 
+  color: white; 
   text-align: left; 
-  justify-content: flex-start;
 }
