@@ -7,6 +7,7 @@ import { FaBackwardStep } from "react-icons/fa6";
 import { SiBookstack } from "react-icons/si";
 import { GiArcheryTarget } from "react-icons/gi";
 import { FaWpforms } from "react-icons/fa";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 import logo from '../assets/logo.png';
 
 export default function Sidebar(props) {
@@ -28,6 +29,7 @@ export default function Sidebar(props) {
             </div>
             <div className='flex flex-col gap-4'>
                 <IoHome className='iconn' onClick={homeIconHandle}/> 
+                <IoChatbubbleEllipses className='iconn' onClick={()=>{navigate("/chat")}}/>
                 <SiBookstack className='iconn' onClick={()=>{navigate("/resource")}}/>
                 <GiArcheryTarget className='iconn'/>
                 <FaWpforms className='iconn'/>
