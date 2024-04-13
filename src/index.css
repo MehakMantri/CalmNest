@@ -165,7 +165,7 @@
 }
 .chatarea{
   width: 75%;
-  background-color: #ffffff;
+  overflow-y: auto;
 }
 
 input[type="text"] {
