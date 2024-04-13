@@ -179,15 +179,24 @@ input[type="text"]:focus {
   outline: none;
   border-color: #66afe9; 
 }
-
+.chatarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; 
+  overflow-y: auto; 
+}
 .chat-container {
   width: 100%;
   padding: 10px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .message-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 .message {
   width:50%;
