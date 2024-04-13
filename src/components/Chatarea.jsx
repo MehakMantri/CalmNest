@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-// import { ThreeDots } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 import logo from "../assets/logo.png";
 
 export default function Chatarea() {
@@ -89,7 +89,7 @@ export default function Chatarea() {
         </div>
       ))}
     </div>
-{/*     <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
+    <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
   visible={true}
   height="80"
   width="80"
@@ -98,7 +98,7 @@ export default function Chatarea() {
   ariaLabel="three-dots-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  />}</div> */}
+  />}</div>
   </div>
   <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%" }}>
     <textarea
