@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -7,7 +8,6 @@ import { CiCirclePlus } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import logo from '../assets/logo.png';
 import Content from './Content';
-import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [showOptions, setShowOptions] = useState(false);

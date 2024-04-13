@@ -71,7 +71,7 @@ export default function Chatarea() {
     />
     <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
   </div>
-  <div className="chat-container">
+  <div className="chat-container" >
     <div className="message-container">
       {message.map((message, index) => (
         <div

@@ -5,7 +5,8 @@ import Books from './Books';
 import Articles from './Articles';
 import ResourceHandler from './ResourceHandler';
 
-const ResourceLibrary = () => {
+const ResourceLibrary = (props) => {
+  props.navi(true);
     const [currentPage,setCurrentPage] = useState('books');
   return (
     <div className='chatbot flex'>
