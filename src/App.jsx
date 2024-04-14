@@ -13,8 +13,10 @@ import '@radix-ui/themes/styles.css';
 import Books from './components/Books';
 import Articles from './components/Articles';
 import { BsChatDotsFill } from "react-icons/bs";
+import Reportresult from './components/Reportresult';
 
 function App() {
+  const[reportInfo,setReportInfo]=useState();
   const navigate=useNavigate();
   const[display,setDisplay]=useState(true);
   function chatIconHandle(){
@@ -25,6 +27,12 @@ function App() {
     console.log(x);
     setDisplay(x);
   }
+  function infoCollection(info){
+    
+    setReportInfo(info);
+   console.log("In app ",reportInfo)
+  }
+
   return (
     <div className="background">
       <Routes>
@@ -32,7 +40,8 @@ function App() {
           <Route index element={<Home navi={handleNavigateToHome}/>} />
           <Route path='/chat' element={<Chatbot navi={handleNavigateToHome}/>}/>
           <Route path='/resource' element={<ResourceLibrary navi={handleNavigateToHome}/>}/>
-          <Route path='/report' element={<Report/>}></Route>
+          <Route path='/report' element={<Report infoCollection={infoCollection}/>}></Route>
+          <Route path='/report/result' element={<Reportresult reportInfo={reportInfo}/>}></Route>
             {/* <Route path='/resource/books' element={<Books/>}/>
             <Route path='/resource/articles' element={<Articles/>}/> */}
           {/* </Route> */}

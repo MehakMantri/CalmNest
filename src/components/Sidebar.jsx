@@ -32,7 +32,7 @@ export default function Sidebar(props) {
                 <IoChatbubbleEllipses className='iconn' onClick={()=>{navigate("/chat")}}/>
                 <SiBookstack className='iconn' onClick={()=>{navigate("/resource")}}/>
                 <GiArcheryTarget className='iconn'/>
-                <FaWpforms className='iconn'/>
+                <FaWpforms className='iconn' onClick={()=>{navigate("/report")}}/>
                 <FaForwardStep className='iconn' onClick={goForward}/>
                 <FaBackwardStep className='iconn' onClick={goBack} />
             </div>
