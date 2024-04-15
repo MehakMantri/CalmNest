@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Mainheader/>}>
           <Route index element={<Home navi={handleNavigateToHome}/>} />
-          <Route path='/chat' element={<Chatbot navi={handleNavigateToHome} url={url} setUrl={setUrl}/>}/>
+          <Route path='/chat' element={<Chatbot navi={handleNavigateToHome}/>}/>
           <Route path='/resource' element={<ResourceLibrary navi={handleNavigateToHome}/>}/>
           <Route path='/report' element={<Report infoCollection={infoCollection}/>}></Route>
           <Route path='/report/result' element={<Reportresult reportInfo={reportInfo}/>}></Route>
