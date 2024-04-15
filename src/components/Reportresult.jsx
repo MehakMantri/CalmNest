@@ -3,8 +3,11 @@ import { Chart as ChartJS } from "chart.js/auto";
 import { Radar } from "react-chartjs-2";
 import { PolarArea } from "react-chartjs-2";
 import { BsFileEarmarkMusic, BsFillFileEarmarkMusicFill } from "react-icons/bs";
+import Sidebar from "./Sidebar";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Reportresult(props) {
+  const navigate=useNavigate();
   const info = props.reportInfo;
   let D = 0,
     A = 0,
@@ -143,14 +146,27 @@ export default function Reportresult(props) {
   }, []);
 
   return (
-    <div className="report-result bg-white">
-      <p>Depression is {depression}</p>
-      <p>Anxiety is {anxiety}</p>
-      <p>Stress is {stress}</p>
-      <div >
-        
-        <div style={{ width: "500px", height: "500px" }}>
-          <PolarArea
+    <div className="bg-white flex w-screen h-screen overflow-y-auto">
+      <Sidebar/>
+      <div className="results w-screen">
+        {/* RESULTS 1 */}
+        <div className="results1 flex ">
+          {/* RESULTS 11 */}
+          <div className="results11 flex flex-col">
+            <div className="flex flex-col items-center">
+              <p className="font-bold">Health Status</p>
+              <p>Your Depression is {depression}</p>
+              <p>Your Anxiety is {anxiety}</p>
+              <p>Your Stress is {stress}</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <p>You can chat with our Doctor!!</p>
+              <button className="btn"  onClick={()=>{navigate("/chat")}}>Chat now</button>
+            </div> 
+          </div>  
+          {/* RESULTS 12 */}
+          <div className="results12" style={{ width: "350px"}}>
+           <PolarArea
             data={{
               labels: ["Depression", "Anxiety", "Stress"],
               datasets: [
@@ -166,28 +182,29 @@ export default function Reportresult(props) {
                 },
               ],
             }}
-          />
+           />
+          </div>
         </div>
-        <div className="">
-            <h1>We recommend you to listen these types of musics :) ..</h1>
+        {/* RESULTS 2 */}
+        <div className="results2 flex flex-col items-center">
+            <h1 className="font-bold">We recommend you to listen these types of musics :) ..</h1>
             <div className="m-4">
               <table>
-              <thead>
-                <tr>
+                <thead>
+                <tr className="tableContent">
                   <th className="p-2">Genre</th>
                   <th className="p-2">Frequency</th>
                 </tr>
-              </thead>
-              <tbody>
+                </thead>
+                <tbody>
                 {retriveMusicData.map((item, index) => (
-                  <tr key={index}>
+                  <tr className="tableContent" key={index}>
                     <td>{item.genre}</td>
                     <td>{item.frequency}</td>
                   </tr>
                 ))}
-              </tbody>
-            </table>
-            
+                </tbody>
+              </table>
             </div>
         </div>
       </div>

@@ -258,7 +258,7 @@ export default function Report(props) {
             </div>
             {/* ************** */}
             <div>
-              <button className='btn'>Submit</button>
+              <button className='btn' onClick={submitHandler}>Submit</button>
             </div>
           </form>
        
