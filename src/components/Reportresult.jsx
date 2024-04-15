@@ -6,23 +6,23 @@ import { PolarArea } from "react-chartjs-2";
 export default function Reportresult(props) {
 
   function getColorForDepression(value) {
-    if (value <= 9 && value >= 0) return '#9effb8'; 
-    else if (value <= 13 && value >= 10) return '#8aff99'; 
-    else if (value >= 14 && value <= 20) return '#2ecc71'; 
+    if (value <= 9 && value >= 0) return '#8aff99'; 
+    else if (value <= 13 && value >= 10) return '#2ecc71'; 
+    else if (value >= 14 && value <= 20) return '#FFA500'; 
     else if (value >= 21 && value <= 27) return ' #ff5733'; 
     else return ' #8b0000'; 
   }
   function getColorForAnxiety(value) {
-    if (value <= 9 && value >= 0) return ' #9effb8'; 
-    else if (value <= 13 && value >= 10) return '#8aff99)'; 
-    else if (value >= 14 && value <= 20) return '#2ecc71'; 
-    else if (value >= 21 && value <= 27) return ' #ff5733'; 
+    if (value <= 7 && value >= 0) return ' #8aff99'; 
+    else if (value <= 9 && value >= 8) return '#2ecc71)'; 
+    else if (value >= 10 && value <= 14) return '#FFA500'; 
+    else if (value >= 15 && value <= 19) return ' #ff5733'; 
     else return ' #8b0000'; 
   }
   function getColorForStress(value) {
-    if (value <= 14 && value >= 0) return ' #9effb8'; 
-    else if (value <= 18 && value >= 15) return '#8aff99'; 
-    else if (value >= 19 && value <= 25) return '#2ecc71'; 
+    if (value <= 14 && value >= 0) return ' #8aff99'; 
+    else if (value <= 18 && value >= 15) return '#2ecc71'; 
+    else if (value >= 19 && value <= 25) return '#FFA500'; 
     else if (value >= 26 && value <= 33) return ' #ff5733'; 
     else return ' #8b0000'; 
   }
