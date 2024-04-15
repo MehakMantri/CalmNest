@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BsArrow90DegDown, BsArrow90DegLeft, BsArrow90DegRight, BsArrow90DegUp, BsArrowBarRight, BsArrowClockwise, BsArrowDown, BsArrowRight, BsEye, BsFolderSymlink, BsLink, BsPencil, BsPencilFill, BsPerson, BsPersonBadge, BsPersonFill, BsSkipEndCircleFill } from 'react-icons/bs';
+import {  BsArrowRight, BsEye, BsPencil, BsPencilFill, BsPerson, BsPersonBadge, BsPersonFill, BsSkipEndCircleFill } from 'react-icons/bs';
 import { TbLoadBalancer, TbLoader } from 'react-icons/tb';
 
 const Books = () => {
@@ -40,7 +40,7 @@ const Books = () => {
 
   if (loading) return <div className='flex m-auto items-center'><span className='text-4xl'>Loading...</span></div>;
   if (error) return <div>Error: {error}</div>;
-  console.log(books);
+
 
   return (
     <div className='overflow-y-auto w-full'>
@@ -48,18 +48,37 @@ const Books = () => {
             <BsArrowRight className=''/><h1 className=''>Some Mostly Recommended Mental Health Books...</h1>
         </div>
       <ul className='flex flex-row flex-wrap justify-around '>
-        {books.map((book) => (
-          <li key={book.id} className='x-2 my-2 w-2/5 p-4 flex flex-col items-center shadow'>
-            <h2 className='font-bold my-3'>{book.volumeInfo.title}</h2>
-            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.id} className='w-1/3 j'/>
-            <div className='flex gap-2 items-center my-2'>
-            <BsPencil/>
-            <p className='text-blue-500'>{book.volumeInfo.authors[0]}</p>
-            </div>
-            <p className='my-1 font-sans font-thin'>{book.volumeInfo.description}</p>
-            <button className='bg-blue-300 px-3 w-38 flex items-center gap-2 text-white rounded my-1'><span><BsEye/></span><span>Read</span></button>
-          </li>
-        ))}
+        {books.map((book) =>{ 
+            {/* console.log(book.volumeInfo); */}
+                try{
+                return(
+
+                    <li key={book.id} className='x-2 my-2 w-2/5 p-4 flex flex-col items-center shadow'>
+                        <h2 className='font-bold my-3'>{book.volumeInfo.title}</h2>
+                        <img src={book.volumeInfo.imageLink.thumbnail} alt={book.id} className='w-1/3'/>
+                        <div className='flex gap-2 items-center my-2'>
+                        <BsPencil/>
+                        <p className='text-blue-500'>{book.volumeInfo.authors[0]}</p>
+                        </div>
+                        <p className='my-1 font-sans font-thin'>{book.volumeInfo.description}</p>
+                        <button className='bg-blue-300 px-3 w-38 text-white rounded my-1'><a href={book.volumeInfo.infoLink} className='flex items-center gap-2' target='_blank'><span><BsEye/></span><span>Read</span></a></button>
+                    </li>
+                )
+                }catch (e) {
+                    return(
+                    <li key={book.id} className='x-2 my-2 w-2/5 p-4 flex flex-col items-center shadow'>
+                        <h2 className='font-bold my-3'>{book.volumeInfo.title}</h2>
+                        <img src={""} alt={book.id} className='w-1/3'/>
+                        <div className='flex gap-2 items-center my-2'>
+                        <BsPencil/>
+                        <p className='text-blue-500'>{book.volumeInfo.authors[0]}</p>
+                        </div>
+                        <p className='my-1 font-sans font-thin'>{book.volumeInfo.description}</p>
+                        <button className='bg-blue-300 px-3 w-38 text-white rounded my-1'><a href={book.volumeInfo.infoLink} className='flex items-center gap-2' target='_blank'><span><BsEye/></span><span>Read</span></a></button>
+                    </li>
+                    )
+                }
+            })}
       </ul>
     </div>
   );

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowAltCircleUp, FaCheck } from "react-icons/fa";
 import { ThreeDots } from 'react-loader-spinner'
 import logo from "../assets/logo.png";
+import { BsCheckCircle, BsCheckCircleFill } from "react-icons/bs";
 
 export default function Chatarea() {
  const [loading, setLoading] = useState(false);
  const [url,setUrl] = useState('');
+ const [boolUrl, setBoolUrl] = useState(false);
  const [message,setMessage] = useState([]);
   const [formData, setformData] = useState({
     query: "",
@@ -16,6 +18,14 @@ export default function Chatarea() {
       [e.target.name]: e.target.value,
     });
   };
+  const chatUrl = localStorage.getItem('api');
+  console.log(chatUrl);
+  const handleSave = () => {
+    localStorage.setItem('api',url);
+    setBoolUrl(true);
+    console.log(localStorage)
+
+  }
   
   const handleSubmit = async (e) => {
     let data;
@@ -29,7 +39,7 @@ export default function Chatarea() {
 
     /* ---------------------Here fetch the data & response from api-----------------*/ 
     try{
-        const response = await fetch(`${url}`, {
+        const response = await fetch(`${chatUrl}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,13 +52,10 @@ export default function Chatarea() {
         console.log("Failed to get query data");
     }
     setLoading(false);
-    /* ---------------------Save messages for bot-----------------*/ 
-    setTimeout(()=>{
-        setMessage((previousMessage)=>[...previousMessage, {text: data.Answer, sender: 'bot'}]);
-        console.log(data.Answer)
-    },500)
-
-
+    /* ---------------------Save messages for bot-----------------*/
+        setTimeout(()=>{
+            setMessage((previousMessage)=>[...previousMessage, {text:data.Answer, sender: 'bot'}]);
+        },500)
   };
 
   return (
@@ -74,11 +81,16 @@ export default function Chatarea() {
         setUrl(e.target.value);
       }}
     />
+    <button onClick={handleSave} className="m-2 px-2 py-1 border-2 rounded-md text-blue-500 flex items-center gap-1 text-sm"><>SET URL</>{boolUrl&&<BsCheckCircle className="text-green-500"/>}</button>
     <img src={logo} alt="" style={{ width: "50px", height: "auto" }} />
   </div>
   <div className="chat-container" >
     <div className="message-container">
-      {message.map((message, index) => (
+      {message.map((message, index) =>{ 
+        {/* if(message.sender === 'bot'){
+            for(let i=0; )
+        } */}
+        return(
         <div
           key={index}
           className={`message ${message.sender === "user" ? "user-message" : "bot-message"}`}
@@ -87,7 +99,7 @@ export default function Chatarea() {
               }}>
           {message.text}
         </div>
-      ))}
+      )})}
     </div>
     <div style={{display:'flex', justifyContent:'center'}}>  {loading && <ThreeDots
   visible={true}
