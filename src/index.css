@@ -3,11 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 .background {
   background-image: url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
@@ -60,6 +55,7 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  margin-left:430px;
 }
 .connect-button {
   margin-left: auto; 
@@ -222,9 +218,6 @@ input[type="text"]:focus {
   text-align: left; 
 }
 
-
-
-/* **************  Report.jsx ***************/
 .report{
   padding: 2rem;
   width: 100vw;
@@ -257,6 +250,7 @@ form{
   
 }
 .btn{
+ 
   background-color: #41B06E;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -267,17 +261,12 @@ form input{
 }
 
 
-/******* Reportresult.jsx ********8*/
-.results1{
-  justify-content: space-evenly;
-  padding: 1rem;
+.report-result{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
 }
-.results11{
-  justify-content: space-around;
-  padding: 1rem;
+.glass-morph {
+  background-color: rgba(153, 144, 144, 0.5);
+  backdrop-filter: blur(0.3); 
 }
-.tableContent{
-  display: flex;
-  gap: 5rem;
-}
-
