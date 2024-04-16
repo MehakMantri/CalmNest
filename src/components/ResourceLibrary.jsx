@@ -16,7 +16,7 @@ const ResourceLibrary = (props) => {
     const [currentPage, setCurrentPage] = useState('books');
 
     return (
-        <div className='chatbot flex'>
+        <div className='chatbot flex ' >
             <Sidebar/>
             <ResourceContent currentPage={currentPage} setCurrentPage={setCurrentPage}/>
             {/* <Books/>

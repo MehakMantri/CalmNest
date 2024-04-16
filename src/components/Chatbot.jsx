@@ -11,7 +11,7 @@ export default function Chatbot(props) {
     }, [props.navi]);
 
     return (
-        <div className='chatbot flex'>
+        <div className='chatbot flex glass-morph'>
             <Sidebar />
             <Chats />
             <Chatarea />

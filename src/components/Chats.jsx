@@ -10,7 +10,7 @@ export default function Chats() {
     const [selectedOption, setSelectedOption] = useState('current');
 
     return (
-        <div className='chats flex flex-col justify-between '>
+        <div className='chats flex flex-col justify-between glass-morph '>
             <div className='flex justify-between items-center'>
                <p className='logo mr-4 font-bold text-2xl'>Chats</p>
                <IoSearch style={{cursor:'pointer', fontSize:'1.5rem'}}/>

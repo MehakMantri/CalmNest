@@ -28,7 +28,7 @@ export default function Report(props) {
   }
   return (
       
-        <div className=' flex bg-white w-full'>
+        <div className=' flex bg-white w-full glass-morph'>
           <Sidebar/>
           <div className='report'>
           <div className='flex flex-col '>
@@ -50,7 +50,7 @@ export default function Report(props) {
             </div>
           </div>
          
-          <form onSubmit={submitHandler}>
+          <form onSubmit={submitHandler} className='glass-morph'>
             <div style={{width:'80vw'}}>
             <div className='Que1 que'>
               <p>I found it hard to wind down</p>
