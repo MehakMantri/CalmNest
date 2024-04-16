@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from './Sidebar';
 export default function Report(props) {
   
   const navigate=useNavigate();
@@ -27,7 +28,9 @@ export default function Report(props) {
   }
   return (
       
-        <div className='report bg-white'>
+        <div className=' flex bg-white w-full'>
+          <Sidebar/>
+          <div className='report'>
           <div className='flex flex-col '>
               <p className=' mt-2 font-bold' style={{width:'80vw'}}>
               Please read each statement and select an option 0, 1, 2 or 3 which indicates how much the statement applied to you over the past week. There are no right or wrong answers. Do not spend too much time on any statement.
@@ -261,6 +264,7 @@ export default function Report(props) {
               <button className='btn' onClick={submitHandler}>Submit</button>
             </div>
           </form>
+          </div>
        
         </div>
     )
