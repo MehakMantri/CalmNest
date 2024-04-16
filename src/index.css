@@ -248,7 +248,7 @@ input[type="text"]:focus {
   margin: 1rem;
   padding: 0.5rem;
 }
-input{
+.surveyForm input{
   display: none;
 }
 label{
