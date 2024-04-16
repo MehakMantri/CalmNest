@@ -44,7 +44,7 @@ function App() {
 
 
   return (
-    <div className="background" style={{ backgroundImage: `url(${themes[themeIndex].backgroundImage})` }}>
+    <div className="background " style={{ backgroundImage: `url(${themes[themeIndex].backgroundImage})` }}>
       <Routes>
         <Route index element={<Home navi={handleNavigateToHome} />} />
         <Route path="/chat" element={<Chatbot navi={handleNavigateToHome}/> } />

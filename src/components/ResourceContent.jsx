@@ -14,7 +14,7 @@ const ResourceContent = ({ currentPage, setCurrentPage }) => {
     setCurrentPage(option);
   };
   return (
-    <div className="chats flex flex-col justify-between ">
+    <div className="chats flex flex-col justify-between">
       <div className="flex justify-between items-center">
         <p className="logo mr-4 font-bold text-2xl">Resource Library</p>
         <IoSearch style={{ cursor: "pointer", fontSize: "1.5rem" }} />
