@@ -154,14 +154,16 @@ export default function Reportresult(props) {
           {/* RESULTS 11 */}
           <div className="results11 flex flex-col">
             <div className="flex flex-col items-center">
-              <p className="font-bold">Health Status</p>
-              <p>Your Depression is {depression}</p>
-              <p>Your Anxiety is {anxiety}</p>
-              <p>Your Stress is {stress}</p>
+              <p className="lato-bold" style={{fontSize:'3rem'}}>Your Health Status</p>
+              <ul style={{listStyleType:'disc'}}>
+                <li className="lato-bold">Depression is {depression}</li>
+                <li className="lato-bold">Anxiety is {anxiety}</li>
+                <li className="lato-bold">Stress is {stress}</li>
+              </ul>
             </div>
             <div className="flex flex-col items-center">
-              <p>You can chat with our Doctor!!</p>
-              <button className="btn"  onClick={()=>{navigate("/chat")}}>Chat now</button>
+              <p className="lato-bold">You can chat with our Doctor!!</p>
+              <button className="btn lato-bold"  onClick={()=>{navigate("/chat")}}>Chat now</button>
             </div> 
           </div>  
           {/* RESULTS 12 */}
