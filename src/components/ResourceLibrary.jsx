@@ -5,25 +5,25 @@ import Books from './Books';
 import Articles from './Articles';
 import ResourceHandler from './ResourceHandler';
 
+
 const ResourceLibrary = (props) => {
-  const { navi } = props;
-  useEffect(() => {
-    navi(true);
-    return () => {
-    };
-  }, [navi]); 
+    useEffect(() => {
+        if (typeof props.navi === 'function') {
+            props.navi(true); // Call props.navi when the component mounts
+        }
+    }, [props.navi]); // Dependency array ensures that the effect runs only when props.navi changes
 
-  const [currentPage, setCurrentPage] = useState('books');
+    const [currentPage, setCurrentPage] = useState('books');
 
-  return (
-    <div className='chatbot flex'>
-      <Sidebar />
-      <ResourceContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {/* <Books/>
-      <Articles/> */}
-      <ResourceHandler currentPage={currentPage} />
-    </div>
-  );
-};
+    return (
+        <div className='chatbot flex'>
+            <Sidebar/>
+            <ResourceContent currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+            {/* <Books/>
+            <Articles/> */}
+            <ResourceHandler currentPage={currentPage}/>
+        </div>
+    );
+}
 
 export default ResourceLibrary;
