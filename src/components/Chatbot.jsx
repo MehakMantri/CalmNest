@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Sidebar from './Sidebar';
 import Chats from './Chats';
 import Chatarea from './Chatarea';
+
 export default function Chatbot(props) {
-    props.navi(false)
+    useEffect(() => {
+        if (typeof props.navi === 'function') {
+            props.navi(false);
+        }
+    }, [props.navi]);
+
     return (
         <div className='chatbot flex'>
-            <Sidebar/>
-            <Chats/>
-            <Chatarea/>
+            <Sidebar />
+            <Chats />
+            <Chatarea />
         </div>
-    )
+    );
 }

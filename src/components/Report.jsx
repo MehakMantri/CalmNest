@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import SideBar from './Sidebar';
 export default function Report(props) {
   
   const navigate=useNavigate();
@@ -26,7 +26,8 @@ export default function Report(props) {
   function changeHandler(event){
     setInfo((prevState)=>{return{...prevState,[event.target.name]:event.target.value}})
   }
-    return (
+  return (
+      
         <div className='report bg-white'>
           <div className='flex flex-col '>
               <p className=' mt-2 font-bold' style={{width:'80vw'}}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import ResourceContent from './ResourceContent';
 import Books from './Books';
@@ -6,17 +6,24 @@ import Articles from './Articles';
 import ResourceHandler from './ResourceHandler';
 
 const ResourceLibrary = (props) => {
-  props.navi(true);
-    const [currentPage,setCurrentPage] = useState('books');
+  const { navi } = props;
+  useEffect(() => {
+    navi(true);
+    return () => {
+    };
+  }, [navi]); 
+
+  const [currentPage, setCurrentPage] = useState('books');
+
   return (
     <div className='chatbot flex'>
-        <Sidebar/>
-        <ResourceContent currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-        {/* <Books/>
-        <Articles/> */}
-        <ResourceHandler currentPage={currentPage}/>
+      <Sidebar />
+      <ResourceContent currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {/* <Books/>
+      <Articles/> */}
+      <ResourceHandler currentPage={currentPage} />
     </div>
-  )
-}
+  );
+};
 
 export default ResourceLibrary;
