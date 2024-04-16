@@ -18,24 +18,30 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
  
-
+// FUNCTION FOR BACKGROUND
   const changeBackground = (themeIndex) => {
     setThemeIndex(themeIndex);
     console.log("Changing background to:", themes[themeIndex].name);
   };
 
+// Function for chat Icon 
   const chatIconHandle = () => {
     navigate('/chat');
   };
 
+
   const handleNavigateToHome = (display) => {
     
   };
+
+// FUNCTION OF SURVEY INFO
   function infoCollection(info){
     setReportInfo(info);
-   console.log("In app ",reportInfo)
+    console.log("In app ",reportInfo)
   }
+
   const isHomePage = location.pathname === '/'; 
+
 
   return (
     <div className="background " style={{ backgroundImage: `url(${themes[themeIndex].backgroundImage})` }}>
@@ -46,9 +52,12 @@ function App() {
         <Route path="/report" element={<Report infoCollection={infoCollection}/>} />
         <Route path="/report/result" element={<Reportresult reportInfo={reportInfo} />} />
       </Routes>
+      
+      {/* NAVBAR ON HOME PAGE */}
       {isHomePage && (
         <Navbar changeBackground={changeBackground} className="navbar absolute top-0 left-0 flex justify-between items-center" />
       )}
+      {/* CHAT ICON ON HOME PAGE */}
       {isHomePage && (
         <BsChatDotsFill
           className="cursor-pointer"

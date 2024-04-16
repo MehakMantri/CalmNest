@@ -225,39 +225,60 @@ input[type="text"]:focus {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-}
-form{
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color:  #ebebeb;
+  justify-content: center;
+}
+.surveyForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color:  #FFEFEF;
+  border-radius: 0.75rem;
+}
+.surveyForm p{
+  font-size: 1.25rem;
 }
 .que{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 2rem;
   margin: 1rem;
   padding: 0.5rem;
 }
-.que p{
-  width: 400px;
- 
+.surveyForm input{
+  display: none;
 }
+label{
+  cursor: pointer;
+  background-color:white ;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+label:hover{
+  background-color: #1b1b1b;
+  color:white;
+}
+
 .options1{
-  width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  gap:2rem;
   
 }
 .btn{
- 
   background-color: #41B06E;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   padding: 0.5rem;
-  width: 10rem;
+  width: 15rem;
 }
 form input{
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 
@@ -267,12 +288,22 @@ form input{
   overflow-y: auto;
 }
 /******* Reportresult.jsx ********8*/
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .results1{
   justify-content: space-evenly;
   padding: 1rem;
 }
 .results11{
-  justify-content: space-around;
+  gap: 3rem;
   padding: 1rem;
 }
 .tableContent{
