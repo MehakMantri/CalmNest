@@ -25,7 +25,7 @@ export default function Report(props) {
   }
 
   return (
-        <div className=' flex bg-white w-full h-full'>
+        <div className=' flex bg-white w-full h-full glass-morph'>
           <Sidebar/>
           <div className="report">
            <div className={`Que${currentQuestion === 0 ? '' : ' hidden'} flex flex-col gap-8`}>
@@ -41,8 +41,10 @@ export default function Report(props) {
             </div>
             <div className='flex justify-center'><button className='btn' onClick={()=>{setCurrentQuestion(1)}}>START ASSESSMENT</button></div>  
            </div>
-           <form onSubmit={submitHandler} className={currentQuestion === 0 ? 'hidden' : 'surveyForm'}>
-        
+           <form
+  onSubmit={submitHandler}
+  className={`${currentQuestion === 0 ? 'hidden' : 'surveyForm'} glass-morph`}
+>
             <div className={`Que${currentQuestion === 1 ? '' : ' hidden'} que `}>
               <p className='lato-bold'>I found it hard to wind down</p>
               <div className='options1'>

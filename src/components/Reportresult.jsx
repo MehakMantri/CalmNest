@@ -146,7 +146,7 @@ export default function Reportresult(props) {
   }, []);
 
   return (
-    <div className="bg-white flex w-screen h-screen overflow-y-auto">
+    <div className="bg-white flex w-screen h-screen overflow-y-auto glass-morph">
       <Sidebar/>
       <div className="results w-screen">
         {/* RESULTS 1 */}
