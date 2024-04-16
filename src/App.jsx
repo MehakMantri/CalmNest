@@ -13,9 +13,11 @@ import Navbar from './components/Navbar';
 import themes from './components/Themes'; 
 
 function App() {
-  const [themeIndex, setThemeIndex] = useState(0); 
+  const [themeIndex, setThemeIndex] = useState(0);
+  const[reportInfo,setReportInfo]=useState(); 
   const navigate = useNavigate();
   const location = useLocation();
+ 
 
   const changeBackground = (themeIndex) => {
     setThemeIndex(themeIndex);
@@ -29,17 +31,20 @@ function App() {
   const handleNavigateToHome = (display) => {
     
   };
-
+  function infoCollection(info){
+    setReportInfo(info);
+   console.log("In app ",reportInfo)
+  }
   const isHomePage = location.pathname === '/'; 
 
   return (
     <div className="background" style={{ backgroundImage: `url(${themes[themeIndex].backgroundImage})` }}>
       <Routes>
         <Route index element={<Home navi={handleNavigateToHome} />} />
-        <Route path="/chat" element={<Chatbot />} />
+        <Route path="/chat" element={<Chatbot navi={handleNavigateToHome}/> } />
         <Route path="/resource" element={<ResourceLibrary />} />
-        <Route path="/report" element={<Report />} />
-        <Route path="/report/result" element={<Reportresult />} />
+        <Route path="/report" element={<Report infoCollection={infoCollection}/>} />
+        <Route path="/report/result" element={<Reportresult reportInfo={reportInfo} />} />
       </Routes>
       {isHomePage && (
         <Navbar changeBackground={changeBackground} className="navbar absolute top-0 left-0 flex justify-between items-center" />

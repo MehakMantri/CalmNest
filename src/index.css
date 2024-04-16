@@ -266,6 +266,21 @@ form input{
   height: 100vh;
   overflow-y: auto;
 }
+/******* Reportresult.jsx ********8*/
+.results1{
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.results11{
+  justify-content: space-around;
+  padding: 1rem;
+}
+.tableContent{
+  display: flex;
+  gap: 5rem;
+}
+
+
 .glass-morph {
   background-color: rgba(153, 144, 144, 0.5);
   backdrop-filter: blur(0.3); 

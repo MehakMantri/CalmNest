@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import SideBar from './Sidebar';
 export default function Report(props) {
   
   const navigate=useNavigate();
