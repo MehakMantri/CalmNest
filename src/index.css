@@ -16,6 +16,20 @@
   align-items: center;
   position: relative; 
 }
+.textarea-style {
+  resize: none;
+  border: none;
+  width: 100%;
+  padding: 0.40rem;
+  border-radius: 1.75rem;
+  background: transparent;
+  color: white;
+}
+
+.textarea-style::placeholder {
+  line-height: 2;
+  color: rgb(245, 236, 236);
+}
 
 .content {
   position: absolute;

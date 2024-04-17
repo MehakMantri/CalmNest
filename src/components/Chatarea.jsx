@@ -112,22 +112,14 @@ export default function Chatarea() {
   wrapperClass=""
   />}</div>
   </div>
-  <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%", background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(10px)", padding: "1rem", borderRadius: "20px", border: "1px solid rgba(255, 255, 255, 0.3)" }}>
+  <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%", background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(10px)",borderRadius: "20px", border: "1px solid rgba(255, 255, 255, 0.3)" }}>
     <textarea
       placeholder="Express how you feel today..."
       name="query"
       value={formData.query}
       onChange={handleChange}
-      style={{
-        resize: "none",
-        border: "none",
-        width: "100%",
-        padding: "0.5rem",
-        borderRadius: "1.75rem",
-        background: "transparent",
-        color: "white",
-      }}
-    />
+       className="textarea-style"
+/>
     <button type="submit">
       <FaArrowAltCircleUp
         style={{
@@ -136,12 +128,12 @@ export default function Chatarea() {
           top: "50%",
           transform: "translateY(-50%)",
           cursor: "pointer",
-          fontSize: "1.25rem",
-          color: "green",
+          fontSize: "1.50rem",
+          color: "rgba(0, 0, 0, 0.8)",
         }}
       />
     </button>
   </form>
 </div>
   );
-}
+} 
