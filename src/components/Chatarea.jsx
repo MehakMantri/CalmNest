@@ -18,7 +18,7 @@ export default function Chatarea() {
       [e.target.name]: e.target.value,
     });
   };
-  const chatUrl = localStorage.getItem('api');
+  const chatUrl = localStorage.getItem('api')+'/chat';
   console.log(chatUrl);
   const handleSave = () => {
     localStorage.setItem('api',url);
@@ -112,7 +112,7 @@ export default function Chatarea() {
   wrapperClass=""
   />}</div>
   </div>
-  <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%" }}>
+  <form onSubmit={handleSubmit} style={{ position: "relative", width: "100%", background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(10px)", padding: "1rem", borderRadius: "20px", border: "1px solid rgba(255, 255, 255, 0.3)" }}>
     <textarea
       placeholder="Express how you feel today..."
       name="query"
@@ -120,10 +120,12 @@ export default function Chatarea() {
       onChange={handleChange}
       style={{
         resize: "none",
-        border: "1px solid #bdbdbd",
+        border: "none",
         width: "100%",
         padding: "0.5rem",
         borderRadius: "1.75rem",
+        background: "transparent",
+        color: "white",
       }}
     />
     <button type="submit">

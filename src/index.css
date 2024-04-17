@@ -3,11 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 .background {
   background-image: url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
@@ -54,12 +49,13 @@
 .connect-btn {
   border-radius: 29px;
   cursor: pointer;
-  background-color: white;
+  /* background-color: white; */
   border: 1px solid black;
   padding: 5px 10px;
   font-size: 14px;
   display: flex;
   align-items: center;
+  margin-left:430px;
 }
 .connect-button {
   margin-left: auto; 
@@ -97,8 +93,8 @@
   margin: 0 auto;
 }
 .user-icon {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 .btn-demo {
@@ -222,9 +218,6 @@ input[type="text"]:focus {
   text-align: left; 
 }
 
-
-
-/* **************  Report.jsx ***************/
 .report{
   padding: 2rem;
   width: 100vw;
@@ -232,52 +225,92 @@ input[type="text"]:focus {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-}
-form{
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color:  #ebebeb;
+  justify-content: center;
+}
+.surveyForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color:  #FFEFEF;
+  border-radius: 0.75rem;
+}
+.surveyForm p{
+  font-size: 1.25rem;
 }
 .que{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 2rem;
   margin: 1rem;
   padding: 0.5rem;
 }
-.que p{
-  width: 400px;
- 
+.surveyForm input{
+  display: none;
 }
+label{
+  cursor: pointer;
+  background-color:white ;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+label:hover{
+  background-color: #1b1b1b;
+  color:white;
+}
+
 .options1{
-  width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  gap:2rem;
   
 }
 .btn{
   background-color: #41B06E;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   padding: 0.5rem;
-  width: 10rem;
+  width: 15rem;
 }
 form input{
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
 
+
+.report-result{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
 /******* Reportresult.jsx ********8*/
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .results1{
   justify-content: space-evenly;
   padding: 1rem;
 }
 .results11{
-  justify-content: space-around;
+  gap: 3rem;
   padding: 1rem;
 }
 .tableContent{
   display: flex;
   gap: 5rem;
 }
-
+.glass-morph {
+  background-color: rgba(153, 144, 144, 0.5);
+  backdrop-filter: blur(0.3); 
+}
