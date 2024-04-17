@@ -18,7 +18,7 @@ export default function Chatarea() {
       [e.target.name]: e.target.value,
     });
   };
-  const chatUrl = localStorage.getItem('api')+'/chat';
+  const chatUrl = localStorage.getItem('api')+'chat';
   console.log(chatUrl);
   const handleSave = () => {
     localStorage.setItem('api',url);

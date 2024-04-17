@@ -106,7 +106,7 @@ export default function Reportresult(props) {
     // A_D_Scores: [x, y],
   }];
   console.log(scaledData);
-  const musicUrl = localStorage.getItem('api') + '/music';
+  const musicUrl = localStorage.getItem('api') + 'music';
   console.log(musicUrl);
   console.log(scaledS,scaledA,scaledD);
   useEffect(() => {
