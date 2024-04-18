@@ -28,7 +28,7 @@ const Books = () => {
                 }
             };
         }).filter((book,index )=>{
-            return index!=5;
+            return index!=3;
         });
         setBooks(updatedBook);
         console.log(updatedBook);
