@@ -387,5 +387,8 @@ justify-content: flex-end;
   display: flex;
   justify-content: flex-end;
 }
-
-
+.music-text{
+  text-align: center;
+  font-size: 1.30rem;
+  font-family: 'Poppins', sans-serif;
+}
