@@ -97,7 +97,11 @@ export default function Chatarea() {
         style={{
                 alignSelf: message.sender === "user" ? "flex-end" : "flex-start",
               }}>
-          {message.text}
+          {<div className="message-text">
+  {message.text.split('\n').map((line, i) => (
+    <div className="poppins-regular" key={i}>{line}</div>
+  ))}
+</div>}
         </div>
       )})}
     </div>

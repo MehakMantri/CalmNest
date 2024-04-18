@@ -146,7 +146,7 @@ export default function Reportresult(props) {
   }, []);
 
   return (
-    <div className="bg-white flex w-screen h-screen overflow-y-auto glass-morph">
+    <div className="bg-white flex w-screen h-screen overflow-y-auto glass-morph Reportresult">
       <Sidebar/>
       <div className="results w-screen">
         {/* RESULTS 1 */}
@@ -156,14 +156,14 @@ export default function Reportresult(props) {
             <div className="flex flex-col items-center">
               <p className="lato-bold" style={{fontSize:'3rem'}}>Your Health Status</p>
               <ul style={{listStyleType:'disc'}}>
-                <li className="lato-bold">Depression is {depression}</li>
-                <li className="lato-bold">Anxiety is {anxiety}</li>
-                <li className="lato-bold">Stress is {stress}</li>
+                <li className="poppins-regular">Depression is {depression}</li>
+                <li className="poppins-regular">Anxiety is {anxiety}</li>
+                <li className="poppins-regular">Stress is {stress}</li>
               </ul>
             </div>
             <div className="flex flex-col items-center">
               <p className="lato-bold">You can chat with our Doctor!!</p>
-              <button className="btn lato-bold"  onClick={()=>{navigate("/chat")}}>Chat now</button>
+              <button className="btn poppins-regular"  onClick={()=>{navigate("/chat")}}>Chat now</button>
             </div> 
           </div>  
           {/* RESULTS 12 */}
@@ -189,22 +189,24 @@ export default function Reportresult(props) {
         </div>
         {/* RESULTS 2 */}
         <div className="results2 flex flex-col items-center">
-            <h1 className="font-bold">We recommend you to listen these types of musics :) ..</h1>
-            <div className="m-4">
-              <table>
+            <h1 className="lato-bold" style={{fontSize:'1.5rem'}}>We recommend you to listen these types of musics :) ..</h1>
+            <div className="m-4 result22">
+              <table className="tablee">
                 <thead>
-                <tr className="tableContent">
-                  <th className="p-2">Genre</th>
-                  <th className="p-2">Frequency</th>
+                <tr className="tableHead">
+                  <div><th className="lato-bold">Genre</th></div>
+                  <div className="tableHead2"><th className="lato-bold">Frequency</th></div>  
                 </tr>
                 </thead>
                 <tbody>
+               
                 {retriveMusicData.map((item, index) => (
                   <tr className="tableContent" key={index}>
-                    <td>{item.genre}</td>
-                    <td>{item.frequency}</td>
+                    <div className="tableContent1"><td className="poppins-regular" >{item.genre}</td></div>
+                    <div className="tableContent2"><td className="poppins-regular">{item.frequency}</td></div>
                   </tr>
                 ))}
+             
                 </tbody>
               </table>
             </div>
