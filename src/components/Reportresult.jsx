@@ -189,7 +189,7 @@ export default function Reportresult(props) {
         </div>
         {/* RESULTS 2 */}
         <div className="results2 flex flex-col items-center">
-            <h1 className="lato-bold music-text" style={{fontSize:'1.5rem'}}>Start a wellness journey through music!<br></br> Explore tunes that brought comfort to others like you.<br></br> Let their picks lift your spirits.</h1>
+            <h1 className="lato-bold music-text">Start a wellness journey through music!<br></br> Explore tunes that brought comfort to others like you.<br></br> Let their picks lift your spirits.</h1>
             <div className="m-4 result22">
               <table className="tablee">
                 <thead>
