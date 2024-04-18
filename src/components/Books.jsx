@@ -18,7 +18,8 @@ const Books = () => {
         }
         
         const data = await response.json();
-        const updatedBook = data.items.map((books) => {
+        const updatedBook = data.items.map((books,index) => {
+
             return {
                 ...books,
                 volumeInfo:{
@@ -26,8 +27,12 @@ const Books = () => {
                     description: books.volumeInfo.description ? books.volumeInfo.description.slice(0,50)+'...':''
                 }
             };
+        }).filter((book,index )=>{
+            return index!=3;
         });
         setBooks(updatedBook);
+        console.log(updatedBook);
+
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -55,7 +60,7 @@ const Books = () => {
 
                     <li key={book.id} className='x-2 my-2 w-2/5 p-4 flex flex-col items-center shadow'>
                         <h2 className='font-bold my-3'>{book.volumeInfo.title}</h2>
-                        <img src={book.volumeInfo.imageLink.thumbnail} alt={book.id} className='w-1/3'/>
+                        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.id} className='w-1/3'/>
                         <div className='flex gap-2 items-center my-2'>
                         <BsPencil/>
                         <p className='text-blue-500'>{book.volumeInfo.authors[0]}</p>
