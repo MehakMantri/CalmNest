@@ -16,6 +16,20 @@
   align-items: center;
   position: relative; 
 }
+.textarea-style {
+  resize: none;
+  border: none;
+  width: 100%;
+  padding: 0.40rem;
+  border-radius: 1.75rem;
+  background: transparent;
+  color: black;
+}
+
+.textarea-style::placeholder {
+  line-height: 2;
+  color: rgb(245, 236, 236);
+}
 
 .content {
   position: absolute;
@@ -293,7 +307,7 @@ form input{
   font-weight: 700;
   font-style: normal;
 }
-.poppins {
+.poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -306,11 +320,75 @@ form input{
   gap: 3rem;
   padding: 1rem;
 }
-.tableContent{
-  display: flex;
-  gap: 5rem;
-}
+
 .glass-morph {
   background-color: rgba(153, 144, 144, 0.5);
   backdrop-filter: blur(0.3); 
+}
+.Reportresult{
+  position: relative;
+}
+.sidebar{
+
+    position: sticky;
+    top: 0;
+    height: 100%; /* Ensure sidebar fills the height of its container */
+    overflow-y: auto; /* Enable scrolling for the sidebar */
+
+}
+
+.results2{
+  width: 100%;
+
+}
+.result22{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.75rem;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  background-color: #FFF6F4;
+}
+
+.tablee{
+  width: 100%;
+}
+
+.tableHead{
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.tableHead div{
+  width: 100%;
+  
+}
+.tableHead th{
+  font-size: 1.75rem;
+}
+.tableHead2{
+display: flex;
+justify-content: flex-end;
+}
+
+.tableContent{
+  padding: 0.5rem;
+  display: flex;
+}
+.tableContent1{
+  width: 100%;
+
+}
+.tableContent2{
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+.music-text{
+  text-align: center;
+  font-size: 1.30rem;
+  font-family: 'Poppins', sans-serif;
 }

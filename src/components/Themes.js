@@ -6,7 +6,7 @@ import ForestBackground from '../assets/Forest.jpg';
 import ForestMusic from '../assets/Forest.mp3';
 import CosmosBackground from '../assets/Cosmos.jpg';
 import CosmosMusic from '../assets/Cosmos.mp3';
-import Defaultimg from '../assets/default.png';
+import Defaultimg from '../assets/default.jpg';
 
 const themes = [
   {
