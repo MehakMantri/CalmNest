@@ -1,6 +1,8 @@
 # CalmNest
 
 CalmNest is an all-purpose website designed to promote mental health and well-being. To learn more about CalmNest, check out the [dev.to blog post](blog-link) for detailed information.
+![image](https://github.com/MehakMantri/CalmNest/assets/114497437/0f3dc763-9cd9-40bf-a9ee-a82196b3080e)
+
 
 ## What does it do?
 
