@@ -1,0 +1,7 @@
+Flask==2.2.5
+Flask-Cors==4.0.0
+numpy==1.25.2
+pyngrok==7.1.6
+torch==1.11.4
+transformers==4.38.2
+joblib==1.4.0
