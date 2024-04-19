@@ -48,14 +48,20 @@ export default function Chatarea() {
         });
         data = await response.json();
         console.log(data);
-    }catch(err){
-        console.log("Failed to get query data");
-    }
-    setLoading(false);
+        setLoading(false);
     /* ---------------------Save messages for bot-----------------*/
         setTimeout(()=>{
             setMessage((previousMessage)=>[...previousMessage, {text:data.Answer, sender: 'bot'}]);
         },500)
+    }catch(err){
+        console.log("Failed to get query data");
+        setLoading(false);
+    /* ---------------------Save messages for bot-----------------*/
+        setTimeout(()=>{
+            setMessage((previousMessage)=>[...previousMessage, {text:"Failed to get query data Please enter the server link..", sender: 'bot'}]);
+        },500)
+    }
+    
   };
 
   return (
