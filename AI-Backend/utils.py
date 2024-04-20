@@ -45,7 +45,7 @@ def infer(question,suggestion,pipe):
         "role": "system",
         "content": "You are a friendly mental-health chatbot.",
     },
-    {"role": "user", "content":f'''Give a short answer to this query using the provided suggestion (if any): \n Query : {question} \n Suggestions : {suggestion}'''},
+    {"role": "user", "content":f'''Give a short answer to this query. If there is a suggested answer provided, use it. : \n Query : {question} \n Suggested Answer : {suggestion}'''},
  ]
 
   prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
