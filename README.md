@@ -46,7 +46,8 @@ You can access the demo video of CalmNest [here](https://youtu.be/l1AOVsF44Vk).
    - Run `npm install` to install the required dependencies.
 
 3. **Run the Website:**
-   - After the dependencies are installed, run `npm run dev` to start the website.
+   - After the dependencies are installed, navigate to the src folder within the website folder.
+   - Run `npm run dev` to start the website.
    - Enter the generated API link in the box located at the top-left corner of the website.
    
 Now, you can finally enter CalmNest and explore its features!
